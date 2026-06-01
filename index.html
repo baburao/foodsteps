@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodSteps — Organic Baby Food Purees</title>
+  <meta name="description" content="FoodSteps baby food purees — 100% natural, non-GMO, no added sugar. Made for babies 6 months and above. Shop on Amazon & Flipkart." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=8" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="nav-logo">
+        <img src="assets/logo.png" alt="FoodSteps Baby Food" />
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#why">Why FoodSteps</a>
+        <a href="#products">Products</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="#products" class="btn btn-primary nav-cta">Shop Now</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+    <img src="assets/logo.png" alt="FoodSteps" class="mobile-logo" />
+    <nav class="mobile-nav">
+      <a href="#home">Home</a>
+      <a href="#why">Why FoodSteps</a>
+      <a href="#products">Products</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#products" class="btn btn-primary">Shop Now</a>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════
+       HERO SECTION — Reference redesign
+  ═══════════════════════════════════════════ -->
+  <section class="hero" id="home">
+
+    <!-- Top: two-column headline row -->
+    <div class="container hero-top">
+      <div class="hero-top-left fade-in">
+        <span class="hero-eyebrow">ORGANIC BABY FOOD</span>
+        <h1 class="hero-headline">
+          Discover the joy of
+          <span class="hero-underline-wrap">
+            pure nourishment
+            <svg class="hero-underline-svg" viewBox="0 0 320 14" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 10 C30 2, 65 14, 100 7 C135 0, 165 14, 200 7 C235 0, 270 14, 318 5" stroke="#4A7C59" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+            </svg>
+          </span>
+          <br>on your terms
+        </h1>
+      </div>
+
+      <div class="hero-top-right fade-in fade-in-delay">
+        <p class="hero-sub">
+          Get organic purees, travel-friendly pouches, and superfood blends — all in one natural solution for your little one.
+        </p>
+        <a href="#products" class="btn-dark-pill">
+          Shop Now
+          <span class="dark-pill-arrow">
+            <svg viewBox="0 0 20 20" fill="none" width="16" height="16"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom: three category cards -->
+    <div class="container hero-cards-row" id="heroCardsRow" data-active="0">
+
+      <!-- Card 0: Starters — default active -->
+      <div class="hcard hcard--warm hcard--active fade-in" data-card="0">
+        <div class="hcard-mid-blob"></div>
+
+        <!-- Collapsed (shown when inactive) -->
+        <div class="hcard-inner-collapsed">
+          <div class="hcard-rotated-wrap">
+            <span class="hcard-rotated-text">Starters</span>
+            <span class="hcard-rotated-sub">6–8 months</span>
+          </div>
+          <div class="hcard-mid-emoji">🥕🍎</div>
+        </div>
+
+        <!-- Expanded (shown when active) -->
+        <div class="hcard-inner-expanded">
+          <div class="hcard-label">Starters</div>
+          <p class="hcard-desc">The all-in-one first food plan for weaning, growing, and exploring flavours — perfectly smooth for tiny tummies aged 6 months and up.</p>
+          <div class="hcard-ui">
+            <div class="hcard-ui-row">
+              <div class="hcard-ui-btn hcard-ui-btn--accent">
+                <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18"><path d="M10 3a7 7 0 100 14A7 7 0 0010 3zm1 10H9V9h2v4zm0-6H9V5h2v2z"/></svg>
+              </div>
+              <div class="hcard-ui-btn">🥕</div>
+              <div class="hcard-ui-btn">🍎</div>
+            </div>
+            <div class="hcard-ui-row">
+              <div class="hcard-ui-avatars"><span>👶</span><span>🍼</span><span>🌿</span></div>
+              <div class="hcard-ui-tag">100g · Spoon included</div>
+            </div>
+          </div>
+          <div class="hcard-visual">
+            <span class="hcard-emoji hcard-emoji-1">🥕</span>
+            <span class="hcard-emoji hcard-emoji-2">🍎</span>
+            <span class="hcard-emoji hcard-emoji-3">🌾</span>
+          </div>
+          <button class="hcard-arrow" onclick="document.querySelector('#products').scrollIntoView({behavior:'smooth'})">
+            <svg viewBox="0 0 20 20" fill="none" width="18" height="18"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="hcard-age-badge">6m+</div>
+        </div>
+      </div>
+
+      <!-- Card 1: Explorers -->
+      <div class="hcard hcard--orange fade-in" data-card="1">
+        <div class="hcard-mid-blob"></div>
+
+        <!-- Collapsed -->
+        <div class="hcard-inner-collapsed">
+          <div class="hcard-rotated-wrap">
+            <span class="hcard-rotated-text">Explorers</span>
+            <span class="hcard-rotated-sub">9–12 months</span>
+          </div>
+          <div class="hcard-mid-emoji">🍌🍠</div>
+        </div>
+
+        <!-- Expanded -->
+        <div class="hcard-inner-expanded">
+          <div class="hcard-label">Explorers</div>
+          <p class="hcard-desc">Bolder flavours and wholesome energy for curious little ones — purple sweet potato, banana &amp; dates packed with antioxidants for 9 months and up.</p>
+          <div class="hcard-ui">
+            <div class="hcard-ui-row">
+              <div class="hcard-ui-btn hcard-ui-btn--accent">⚡</div>
+              <div class="hcard-ui-btn">🍠</div>
+              <div class="hcard-ui-btn">🍌</div>
+            </div>
+            <div class="hcard-ui-row">
+              <div class="hcard-ui-avatars"><span>🌟</span><span>🧡</span><span>🌴</span></div>
+              <div class="hcard-ui-tag">Antioxidant-rich</div>
+            </div>
+          </div>
+          <div class="hcard-visual">
+            <span class="hcard-emoji hcard-emoji-1">🍠</span>
+            <span class="hcard-emoji hcard-emoji-2">🍌</span>
+            <span class="hcard-emoji hcard-emoji-3">🌴</span>
+          </div>
+          <button class="hcard-arrow" onclick="document.querySelector('#products').scrollIntoView({behavior:'smooth'})">
+            <svg viewBox="0 0 20 20" fill="none" width="18" height="18"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="hcard-age-badge">9m+</div>
+        </div>
+      </div>
+
+      <!-- Card 2: Toddlers -->
+      <div class="hcard hcard--green fade-in" data-card="2">
+        <div class="hcard-mid-blob"></div>
+
+        <!-- Collapsed -->
+        <div class="hcard-inner-collapsed">
+          <div class="hcard-rotated-wrap">
+            <span class="hcard-rotated-text">Toddlers</span>
+            <span class="hcard-rotated-sub">12+ months</span>
+          </div>
+          <div class="hcard-mid-emoji">🍓🥦</div>
+        </div>
+
+        <!-- Expanded -->
+        <div class="hcard-inner-expanded">
+          <div class="hcard-label">Toddlers</div>
+          <p class="hcard-desc">Fibre-rich, vitamin-packed blends to fuel big-kid energy — banana, strawberry &amp; oats for immunity, growth and flavours they'll ask for again and again.</p>
+          <div class="hcard-ui">
+            <div class="hcard-ui-row">
+              <div class="hcard-ui-btn hcard-ui-btn--accent">💪</div>
+              <div class="hcard-ui-btn">🍓</div>
+              <div class="hcard-ui-btn">🌾</div>
+            </div>
+            <div class="hcard-ui-row">
+              <div class="hcard-ui-avatars"><span>🌱</span><span>💚</span><span>🏃</span></div>
+              <div class="hcard-ui-tag">Fibre &amp; Vitamin C</div>
+            </div>
+          </div>
+          <div class="hcard-visual">
+            <span class="hcard-emoji hcard-emoji-1">🍓</span>
+            <span class="hcard-emoji hcard-emoji-2">🍌</span>
+            <span class="hcard-emoji hcard-emoji-3">🌾</span>
+          </div>
+          <button class="hcard-arrow" onclick="document.querySelector('#products').scrollIntoView({behavior:'smooth'})">
+            <svg viewBox="0 0 20 20" fill="none" width="18" height="18"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="hcard-age-badge">12m+</div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       WHY FOODSTEPS
+  ═══════════════════════════════════════════ -->
+  <section class="why" id="why">
+    <div class="container">
+      <div class="section-label fade-in">Our Promise</div>
+      <h2 class="section-title fade-in">Why Parents Choose FoodSteps</h2>
+      <p class="section-sub fade-in">Every pouch is a step toward a lifetime of healthy eating habits — crafted with love, backed by science.</p>
+
+      <div class="why-board-outer">
+
+        <!-- Single overlay SVG: all 3 dashed connectors -->
+        <svg class="why-connectors" viewBox="0 0 1140 520" preserveAspectRatio="none" fill="none" aria-hidden="true">
+          <path d="M 300 192 C 520 260, 740 65, 860 108" stroke="#B8CCBA" stroke-width="2.5" stroke-dasharray="10 7" stroke-linecap="round"/>
+          <path d="M 860 295 C 720 355, 490 240, 300 265" stroke="#D4C4B0" stroke-width="2.5" stroke-dasharray="10 7" stroke-linecap="round"/>
+          <path d="M 300 435 C 490 492, 720 335, 860 362" stroke="#C4B8D8" stroke-width="2.5" stroke-dasharray="10 7" stroke-linecap="round"/>
+        </svg>
+
+        <div class="why-board">
+
+          <!-- Left column: notes 01 and 03 -->
+          <div class="why-col why-col--left">
+            <div class="why-note why-note--1 why-note--green fade-in">
+              <div class="why-pin why-pin--green"></div>
+              <span class="why-num">01</span>
+              <h3 class="why-note-title">Made with Love</h3>
+              <p class="why-note-body">100% natural and vegetarian — non-GMO, no added sugar, no gluten, no artificial colours or preservatives. Just pure goodness in every bite.</p>
+            </div>
+            <div class="why-note why-note--3 why-note--lavender fade-in">
+              <div class="why-pin why-pin--purple"></div>
+              <span class="why-num">03</span>
+              <h3 class="why-note-title">Enhances Taste Buds</h3>
+              <p class="why-note-body">A diverse range of delicious purees introducing your little one to a world of flavours — smooth, consistent texture loved by babies everywhere.</p>
+            </div>
+          </div>
+
+          <!-- Right column: notes 02 and 04 (offset down) -->
+          <div class="why-col why-col--right">
+            <div class="why-note why-note--2 why-note--peach fade-in">
+              <div class="why-pin why-pin--orange"></div>
+              <span class="why-num">02</span>
+              <h3 class="why-note-title">Yummy &amp; Travel Friendly</h3>
+              <p class="why-note-body">Small, compact, ready-to-eat pouches that fit right in your bag. Perfect for road trips, quick outings, and every adventure in between.</p>
+            </div>
+            <div class="why-note why-note--4 why-note--blue fade-in">
+              <div class="why-pin why-pin--blue"></div>
+              <span class="why-num">04</span>
+              <h3 class="why-note-title">Safe &amp; FSSAI Certified</h3>
+              <p class="why-note-body">FSSAI licensed, zero artificial preservatives, made in a hygienically controlled facility — because your baby deserves only the safest start.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       PRODUCTS SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-label fade-in">Our Range</div>
+      <h2 class="section-title fade-in">Pure Flavours, Happy Babies</h2>
+      <p class="section-sub fade-in">Superfood combinations designed by nutrition experts — each pouch is 100g with a spoon included.</p>
+
+      <div class="products-grid">
+
+        <div class="product-card fade-in">
+          <div class="product-visual product-visual--orange">
+            <span class="product-emoji">🥕🍎</span>
+            <div class="product-blob"></div>
+          </div>
+          <div class="product-body">
+            <div class="product-meta">
+              <span class="product-age">6m+</span>
+              <span class="product-weight">100g</span>
+            </div>
+            <h3 class="product-name">Carrot, Apple &amp; Ragi</h3>
+            <p class="product-desc">Introduce the goodness of superfoods into your little one's diet. Ragi brings calcium and iron, apple adds natural sweetness, carrot provides beta-carotene.</p>
+            <div class="product-tags">
+              <span>🥕 Carrot</span><span>🍎 Apple</span><span>🌾 Ragi</span>
+            </div>
+            <a href="https://www.amazon.in" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Buy on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card fade-in">
+          <div class="product-visual product-visual--purple">
+            <span class="product-emoji">🍠🍌</span>
+            <div class="product-blob"></div>
+          </div>
+          <div class="product-body">
+            <div class="product-meta">
+              <span class="product-age">6m+</span>
+              <span class="product-weight">100g</span>
+            </div>
+            <h3 class="product-name">Purple Sweet Potato, Banana &amp; Dates</h3>
+            <p class="product-desc">Delicious purees made pocket-friendly for your journeys afar. Natural sweetness from dates, energy from banana, and antioxidants from purple sweet potato.</p>
+            <div class="product-tags">
+              <span>🍠 Sweet Potato</span><span>🍌 Banana</span><span>🌴 Dates</span>
+            </div>
+            <a href="https://www.amazon.in" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Buy on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card fade-in">
+          <div class="product-visual product-visual--yellow">
+            <span class="product-emoji">🍓🍌</span>
+            <div class="product-blob"></div>
+          </div>
+          <div class="product-body">
+            <div class="product-meta">
+              <span class="product-age">6m+</span>
+              <span class="product-weight">100g</span>
+            </div>
+            <h3 class="product-name">Banana, Strawberry &amp; Oats</h3>
+            <p class="product-desc">Helping in the positive growth of your child through smooth texture and yummy flavours. Oats provide fibre, strawberry adds Vitamin C, banana delivers potassium.</p>
+            <div class="product-tags">
+              <span>🍌 Banana</span><span>🍓 Strawberry</span><span>🌾 Oats</span>
+            </div>
+            <a href="https://www.amazon.in" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Buy on Amazon</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="products-more fade-in">
+        <p>Also available in Mango, Pumpkin, Spinach &amp; Pea, Papaya and more</p>
+        <a href="https://www.amazon.in" target="_blank" rel="noopener" class="btn btn-outline">View All Products →</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT US
+  ═══════════════════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="container about-inner">
+
+      <div class="about-visual fade-in">
+        <div class="about-shape">
+          <div class="about-icon-cluster">
+            <span class="about-icon about-icon-1">🌿</span>
+            <span class="about-icon about-icon-2">👶</span>
+            <span class="about-icon about-icon-3">❤️</span>
+            <span class="about-icon about-icon-4">🥄</span>
+          </div>
+          <div class="about-stat">
+            <strong>100%</strong>
+            <span>Natural</span>
+          </div>
+          <div class="about-stat about-stat-2">
+            <strong>6m+</strong>
+            <span>Baby-safe</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-text fade-in">
+        <div class="section-label">Our Story</div>
+        <h2 class="section-title">About Us</h2>
+        <p class="about-mission">
+          "We believe every baby deserves a head start with food that's as pure as their smile."
+        </p>
+        <p>
+          At FoodSteps, we're on a mission to make healthy, enjoyable and nutritious food purees accessible for every parent — whether you're a busy professional or a dedicated stay-at-home mum or dad.
+        </p>
+        <p>
+          Every pouch we make is a labour of love. We source the finest natural ingredients, blend them to a perfectly smooth consistency, and pack them in compact, ready-to-eat pouches — so you can focus on the moments that matter.
+        </p>
+        <p>
+          FoodSteps is a product of <strong>Xobu Food &amp; Beverages Pvt Ltd</strong>, based in Tumkur, Karnataka, India.
+        </p>
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       TESTIMONIALS
+  ═══════════════════════════════════════════ -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-label fade-in">Parent Love</div>
+      <h2 class="section-title fade-in">What Mums &amp; Dads Say</h2>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"My 8-month-old absolutely loves the Carrot, Apple &amp; Ragi pouch! I love that it's all-natural with no preservatives. It's become a staple in our travel bag."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">P</div>
+            <div>
+              <strong>Priya M.</strong>
+              <span>Mum to 8-month-old, Bengaluru</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Finally a baby food brand that doesn't add sugar or preservatives. The Purple Sweet Potato pouch is my daughter's favourite — she literally grabs it out of my hands!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">R</div>
+            <div>
+              <strong>Rahul &amp; Sneha K.</strong>
+              <span>Parents of a 10-month-old, Chennai</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"So convenient for travel! We went on a family trip and FoodSteps pouches saved us. No mess, no fuss, perfectly smooth, and my son loved every single flavour."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div>
+              <strong>Ananya S.</strong>
+              <span>Mum to 7-month-old, Mumbai</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       TRUST BADGES
+  ═══════════════════════════════════════════ -->
+  <section class="trust">
+    <div class="container">
+      <h2 class="section-title fade-in">Safe for Your Little One</h2>
+      <p class="section-sub fade-in">Every FoodSteps pouch meets the highest quality and safety standards.</p>
+
+      <div class="trust-grid">
+
+        <div class="trust-badge fade-in">
+          <div class="trust-icon">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" fill="#E8F5EE"/><path d="M20 10l7 4v6c0 4-3 7.5-7 9-4-1.5-7-5-7-9v-6l7-4z" fill="#4A7C59" opacity=".3"/><path d="M16 20l3 3 5-5" stroke="#4A7C59" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span>FSSAI Licensed</span>
+        </div>
+
+        <div class="trust-badge fade-in">
+          <div class="trust-icon">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" fill="#E8F5EE"/><circle cx="20" cy="20" r="8" stroke="#4A7C59" stroke-width="2"/><path d="M20 16v4l2.5 2.5" stroke="#4A7C59" stroke-width="2" stroke-linecap="round"/><path d="M14 10l-3-3M26 10l3-3" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <span>Non-GMO</span>
+        </div>
+
+        <div class="trust-badge fade-in">
+          <div class="trust-icon">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" fill="#E8F5EE"/><path d="M12 20h16M20 12v16" stroke="#4A7C59" stroke-width="2.5" stroke-linecap="round"/><circle cx="20" cy="20" r="6" stroke="#4A7C59" stroke-width="2"/><line x1="13" y1="13" x2="27" y2="27" stroke="#F4A261" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <span>No Added Sugar</span>
+        </div>
+
+        <div class="trust-badge fade-in">
+          <div class="trust-icon">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" fill="#E8F5EE"/><path d="M15 28s-3-4-3-8a8 8 0 0116 0c0 4-3 8-3 8" stroke="#4A7C59" stroke-width="2" stroke-linecap="round"/><path d="M17 28h6" stroke="#4A7C59" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="17" r="3" fill="#4A7C59" opacity=".4"/></svg>
+          </div>
+          <span>No Preservatives</span>
+        </div>
+
+        <div class="trust-badge fade-in">
+          <div class="trust-icon">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" fill="#E8F5EE"/><path d="M20 12c-4 0-7 3-7 7 0 3 2 5 4 7h6c2-2 4-4 4-7 0-4-3-7-7-7z" fill="#4A7C59" opacity=".25"/><path d="M17 26l-2 3h10l-2-3" stroke="#4A7C59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 20l3 3 5-6" stroke="#4A7C59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span>Gluten Free</span>
+        </div>
+
+        <div class="trust-badge fade-in">
+          <div class="trust-icon">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" fill="#E8F5EE"/><circle cx="20" cy="18" r="5" fill="#4A7C59" opacity=".3"/><path d="M20 13v-3M14.5 15.5l-2-2M25.5 15.5l2-2" stroke="#4A7C59" stroke-width="2" stroke-linecap="round"/><path d="M14 24c1.5-2 3.5-3 6-3s4.5 1 6 3" stroke="#4A7C59" stroke-width="2" stroke-linecap="round"/><path d="M17 28v2M23 28v2" stroke="#4A7C59" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <span>100% Vegetarian</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       AVAILABLE ON
+  ═══════════════════════════════════════════ -->
+  <section class="marketplace">
+    <div class="container">
+      <div class="marketplace-inner fade-in">
+        <h2>Find Us On</h2>
+        <p>FoodSteps is available on your favourite online marketplaces — delivered right to your door.</p>
+        <div class="marketplace-buttons">
+          <a href="https://www.amazon.in" target="_blank" rel="noopener" class="marketplace-btn marketplace-btn--amazon">
+            <svg viewBox="0 0 603 182" fill="none" xmlns="http://www.w3.org/2000/svg" height="28">
+              <text x="10" y="140" font-family="Arial, sans-serif" font-weight="900" font-size="160" fill="#FF9900">amazon</text>
+            </svg>
+            <span>Shop on Amazon</span>
+          </a>
+          <a href="https://www.flipkart.com" target="_blank" rel="noopener" class="marketplace-btn marketplace-btn--flipkart">
+            <span class="flipkart-logo">flipkart</span>
+            <span>Shop on Flipkart</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container contact-inner">
+
+      <div class="contact-info fade-in">
+        <div class="section-label">Get in Touch</div>
+        <h2 class="section-title">We'd Love to Hear from You</h2>
+        <p>We're available 24/7 to answer all your queries, handle bulk orders, or just chat about baby nutrition.</p>
+
+        <ul class="contact-list">
+          <li>
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="#4A7C59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:+918197877744">+91 81978 77744</a>
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="#4A7C59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:info@foodsteps.baby">info@foodsteps.baby</a>
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="#4A7C59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="#4A7C59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <strong>Address</strong>
+              <span>Xobu Food &amp; Beverages Pvt Ltd,<br />Tumkur, Karnataka, India</span>
+            </div>
+          </li>
+        </ul>
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook" class="social-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="social-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube" class="social-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap fade-in">
+        <form class="contact-form" onsubmit="handleFormSubmit(event)">
+          <h3>Send us a Message</h3>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Priya Sharma" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="priya@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Your question or message..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          <div class="form-success" id="formSuccess">
+            ✅ Message sent! We'll get back to you within 24 hours.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="FoodSteps" class="footer-logo" />
+        <p>Wholesome baby food purees made with love, crafted for curious little eaters from 6 months and up.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook" class="social-link social-link--light">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="social-link social-link--light">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube" class="social-link social-link--light">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#why">Why FoodSteps</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="https://www.amazon.in" target="_blank" rel="noopener">Amazon</a></li>
+          <li><a href="https://www.flipkart.com" target="_blank" rel="noopener">Flipkart</a></li>
+        </ul>
+        <h4 style="margin-top: 1.5rem;">Policies</h4>
+        <ul>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Return Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Stay Updated</h4>
+        <p>Get tips on baby nutrition and new flavour launches.</p>
+        <form class="footer-newsletter" onsubmit="handleNewsletterSubmit(event)">
+          <input type="email" placeholder="Your email address" required />
+          <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+        </form>
+        <div class="footer-newsletter-success" id="newsletterSuccess">
+          ✅ You're subscribed!
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2024 Xobu Food &amp; Beverages Pvt Ltd. All rights reserved. | FoodSteps is a registered trademark.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       FOODY AI CHATBOT WIDGET
+  ═══════════════════════════════════════════ -->
+
+  <!-- Floating trigger button -->
+  <button class="foody-trigger" id="foodyTrigger" aria-label="Ask Foody for food recommendations">
+    <div class="foody-trigger-icon">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="18" fill="#4A7C59"/>
+        <path d="M13 18c0-3.87 3.13-7 7-7s7 3.13 7 7c0 2.5-1.3 4.7-3.27 5.98L23 26H17l-.27-2.02A6.994 6.994 0 0113 18z" fill="white" opacity=".9"/>
+        <path d="M17 26v2a1 1 0 001 1h4a1 1 0 001-1v-2" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="17.5" cy="17.5" r="1.5" fill="#4A7C59"/>
+        <circle cx="22.5" cy="17.5" r="1.5" fill="#4A7C59"/>
+        <path d="M17.5 21c.8.8 1.8 1.2 2.5 1.2s1.7-.4 2.5-1.2" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <span class="foody-trigger-label">Ask Foody</span>
+    <div class="foody-pulse"></div>
+  </button>
+
+  <!-- Chat Panel -->
+  <div class="foody-panel" id="foodyPanel" role="dialog" aria-label="Foody food recommender">
+
+    <!-- Header -->
+    <div class="foody-header">
+      <div class="foody-header-avatar">🌿</div>
+      <div class="foody-header-info">
+        <strong>Foody</strong>
+        <span>FoodSteps AI · Always here</span>
+      </div>
+      <div class="foody-header-status">
+        <span class="foody-dot"></span> Online
+      </div>
+      <button class="foody-close" id="foodyClose" aria-label="Close chat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <!-- Messages area -->
+    <div class="foody-messages" id="foodyMessages"></div>
+
+    <!-- Quick replies area -->
+    <div class="foody-replies" id="foodyReplies"></div>
+
+    <!-- Input row (restart) -->
+    <div class="foody-footer">
+      <button class="foody-restart" id="foodyRestart" onclick="foodyRestart()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg>
+        Start Over
+      </button>
+      <span class="foody-brand">Powered by <strong>FoodSteps</strong></span>
+    </div>
+
+  </div>
+
+  <script src="script.js?v=7"></script>
+</body>
+</html>
