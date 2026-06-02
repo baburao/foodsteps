@@ -30,6 +30,20 @@
 
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --max-width: 1200px;
+
+  /* ── Fruit palette ── */
+  --fruit-yellow:       #FFD93D;
+  --fruit-yellow-bg:    #FFFBDD;
+  --fruit-orange:       #FF8C42;
+  --fruit-orange-bg:    #FFF3E8;
+  --fruit-lime:         #6BCB77;
+  --fruit-lime-bg:      #F0FFF4;
+  --fruit-berry:        #9B5DE5;
+  --fruit-berry-bg:     #F5F0FF;
+  --fruit-strawberry:   #FF6B6B;
+  --fruit-strawberry-bg:#FFF0F0;
+  --fruit-peach:        #FFAB76;
+  --fruit-peach-bg:     #FFF6EE;
 }
 
 /* ═══════════════════════════════════════════
@@ -158,16 +172,20 @@ section { overflow: hidden; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: rgba(255, 251, 245, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.06);
+  transition: background 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
 .navbar.scrolled {
-  border-bottom-color: var(--color-border);
-  box-shadow: var(--shadow-sm);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
 }
 
 .nav-inner {
@@ -880,9 +898,13 @@ section { overflow: hidden; }
    PRODUCTS
 ═══════════════════════════════════════════ */
 .products {
-  padding: 100px 0;
-  background: var(--color-primary-light);
+  padding: 100px 0 80px;
+  background: var(--fruit-yellow-bg);
+  position: relative;
 }
+.products .section-label { color: var(--fruit-orange); }
+.products .section-title { color: var(--color-dark); }
+.products .section-sub   { color: var(--color-mid); }
 
 .products-grid {
   display: grid;
@@ -893,25 +915,29 @@ section { overflow: hidden; }
 
 .product-card {
   background: var(--color-white);
-  border-radius: var(--radius-lg);
+  border-radius: 28px;
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
   transition: var(--transition);
-  border: 1px solid var(--color-border);
+  border: 2.5px solid transparent;
+  position: relative;
 }
-.product-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+.product-card:hover { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(0,0,0,0.13); }
+.product-card:nth-child(1):hover { border-color: var(--fruit-orange); }
+.product-card:nth-child(2):hover { border-color: var(--fruit-berry); }
+.product-card:nth-child(3):hover { border-color: var(--fruit-yellow); }
 
 .product-visual {
-  height: 200px;
+  height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
 }
-.product-visual--orange { background: linear-gradient(135deg, #FDE8D0 0%, #FECBA5 100%); }
-.product-visual--purple { background: linear-gradient(135deg, #EDE0F5 0%, #D5B8EA 100%); }
-.product-visual--yellow { background: linear-gradient(135deg, #FFF3CC 0%, #FFE080 100%); }
+.product-visual--orange { background: linear-gradient(155deg, #FFE4B5 0%, #FFBE76 100%); }
+.product-visual--purple { background: linear-gradient(155deg, #E8D0F8 0%, #C49EE8 100%); }
+.product-visual--yellow { background: linear-gradient(155deg, #FFF0A0 0%, #FFD740 100%); }
 
 .product-blob {
   position: absolute;
@@ -955,8 +981,8 @@ section { overflow: hidden; }
   padding: 3px 10px;
   border-radius: var(--radius-full);
 }
-.product-age { background: var(--color-primary); color: white; }
-.product-weight { background: var(--color-border); color: var(--color-mid); }
+.product-age    { background: var(--fruit-lime);   color: #1a4a1e; font-weight: 700; }
+.product-weight { background: var(--fruit-yellow); color: #6b4a00; font-weight: 700; }
 
 .product-name {
   font-family: var(--font-heading);
@@ -980,11 +1006,54 @@ section { overflow: hidden; }
 }
 .product-tags span {
   font-size: 0.75rem;
-  background: var(--color-cream);
-  border: 1px solid var(--color-border);
-  color: var(--color-mid);
-  padding: 3px 10px;
+  background: var(--fruit-yellow-bg);
+  border: 1.5px solid var(--fruit-yellow);
+  color: #7a5500;
+  padding: 4px 12px;
   border-radius: var(--radius-full);
+  font-weight: 500;
+}
+.product-card:nth-child(2) .product-tags span {
+  background: var(--fruit-berry-bg);
+  border-color: #c49eea;
+  color: #5a2d8a;
+}
+.product-card:nth-child(3) .product-tags span {
+  background: var(--fruit-strawberry-bg);
+  border-color: #ffb3b3;
+  color: #8a2020;
+}
+
+/* ── Best Seller badge ── */
+.best-seller-badge {
+  position: absolute;
+  top: 14px; right: 14px;
+  background: var(--fruit-orange);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  z-index: 2;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 8px rgba(255,140,66,0.4);
+}
+
+/* ── Star rating ── */
+.product-stars {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 0.6rem;
+}
+.product-stars .stars-filled {
+  color: var(--fruit-orange);
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+}
+.product-stars .review-count {
+  font-size: 0.75rem;
+  color: var(--color-mid);
 }
 
 .products-more {
@@ -1005,8 +1074,9 @@ section { overflow: hidden; }
 ═══════════════════════════════════════════ */
 .about {
   padding: 100px 0;
-  background: var(--color-cream);
+  background: linear-gradient(160deg, var(--fruit-peach-bg) 0%, #FFF8F2 100%);
 }
+.about .section-label { color: var(--fruit-orange); }
 
 .about-inner {
   display: grid;
@@ -1143,8 +1213,11 @@ section { overflow: hidden; }
 ═══════════════════════════════════════════ */
 .testimonials {
   padding: 100px 0;
-  background: var(--color-white);
+  background: var(--fruit-lime-bg);
+  position: relative;
 }
+.testimonials .section-label { color: var(--fruit-lime); }
+.testimonials .section-title span { color: var(--fruit-strawberry); }
 
 .testimonials-grid {
   display: grid;
@@ -1153,29 +1226,45 @@ section { overflow: hidden; }
 }
 
 .testimonial-card {
-  background: var(--color-cream);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: 28px;
   padding: 2rem;
   transition: var(--transition);
   position: relative;
+  border: 2px solid transparent;
 }
-.testimonial-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.testimonial-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+
+/* Each card gets its own fruit color */
+.testimonial-card:nth-child(1) {
+  background: var(--fruit-yellow-bg);
+  border-color: var(--fruit-yellow);
+}
+.testimonial-card:nth-child(2) {
+  background: var(--fruit-peach-bg);
+  border-color: var(--fruit-peach);
+}
+.testimonial-card:nth-child(3) {
+  background: var(--fruit-berry-bg);
+  border-color: #c8a8f0;
+}
+
 .testimonial-card::before {
   content: '"';
   position: absolute;
-  top: 1rem; right: 1.5rem;
+  top: 0.5rem; right: 1.25rem;
   font-family: var(--font-heading);
-  font-size: 5rem;
-  color: var(--color-primary-light);
+  font-size: 6rem;
   line-height: 1;
 }
+.testimonial-card:nth-child(1)::before { color: rgba(255,217,61,0.5); }
+.testimonial-card:nth-child(2)::before { color: rgba(255,171,118,0.5); }
+.testimonial-card:nth-child(3)::before { color: rgba(155,93,229,0.25); }
 
 .stars {
-  color: var(--color-accent);
-  font-size: 1rem;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
+  color: var(--fruit-orange);
+  font-size: 1.15rem;
+  letter-spacing: 3px;
+  margin-bottom: 0.75rem;
 }
 
 .testimonial-text {
@@ -1219,17 +1308,19 @@ section { overflow: hidden; }
 ═══════════════════════════════════════════ */
 .trust {
   padding: 80px 0;
-  background: var(--color-primary-light);
+  background: linear-gradient(160deg, #E8FFF0 0%, #D4F5D0 100%);
   text-align: center;
+  position: relative;
 }
 
+.trust .section-label { color: var(--fruit-lime); }
 .trust .section-title,
 .trust .section-sub { text-align: center; margin-left: auto; margin-right: auto; }
 
 .trust-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .trust-badge {
@@ -1237,20 +1328,40 @@ section { overflow: hidden; }
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
-  padding: 1.5rem 1rem;
-  background: var(--color-white);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--color-border);
+  padding: 1.75rem 0.75rem 1.25rem;
+  border-radius: 20px;
+  border: 2.5px solid transparent;
   transition: var(--transition);
+  cursor: default;
 }
-.trust-badge:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.trust-badge:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
 
-.trust-icon { width: 48px; height: 48px; }
+/* Per-badge color skins */
+.trust-badge:nth-child(1) { background: #E8F8F0; border-color: #6BCB77; }
+.trust-badge:nth-child(2) { background: var(--fruit-orange-bg); border-color: var(--fruit-orange); }
+.trust-badge:nth-child(3) { background: var(--fruit-strawberry-bg); border-color: var(--fruit-strawberry); }
+.trust-badge:nth-child(4) { background: var(--fruit-berry-bg); border-color: #b388f0; }
+.trust-badge:nth-child(5) { background: var(--fruit-yellow-bg); border-color: var(--fruit-yellow); }
+.trust-badge:nth-child(6) { background: var(--fruit-peach-bg); border-color: var(--fruit-peach); }
+
+.trust-icon {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
 .trust-icon svg { width: 100%; height: 100%; }
+
+/* Colorise the SVG circles per badge */
+.trust-badge:nth-child(1) .trust-icon svg circle:first-child { fill: #C8F5D0; }
+.trust-badge:nth-child(2) .trust-icon svg circle:first-child { fill: #FFE0C8; }
+.trust-badge:nth-child(3) .trust-icon svg circle:first-child { fill: #FFD0D0; }
+.trust-badge:nth-child(4) .trust-icon svg circle:first-child { fill: #E8D8FF; }
+.trust-badge:nth-child(5) .trust-icon svg circle:first-child { fill: #FFF5A0; }
+.trust-badge:nth-child(6) .trust-icon svg circle:first-child { fill: #FFE8D0; }
 
 .trust-badge span {
   font-size: 0.8125rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-dark);
   text-align: center;
   line-height: 1.3;

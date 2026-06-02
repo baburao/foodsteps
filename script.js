@@ -119,13 +119,16 @@ function initHeroCards() {
     });
   }
 
+  /* Desktop: expand on hover */
   cards.forEach((card, idx) => {
-    card.addEventListener('click', (e) => {
-      if (card.classList.contains('hcard--active') &&
-          !e.target.closest('.hcard-arrow')) return;
-      activateCard(idx);
-    });
-    /* Touch devices */
+    card.addEventListener('mouseenter', () => activateCard(idx));
+  });
+
+  /* Row mouse-leave: return to first card */
+  row.addEventListener('mouseleave', () => activateCard(0));
+
+  /* Mobile: tap to expand */
+  cards.forEach((card, idx) => {
     card.addEventListener('touchend', (e) => {
       if (card.classList.contains('hcard--active') &&
           !e.target.closest('.hcard-arrow')) return;
