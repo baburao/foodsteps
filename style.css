@@ -1986,26 +1986,29 @@ section { overflow: hidden; }
 
 /* Quick replies */
 .foody-replies {
-  padding: 8px 16px 12px;
+  padding: 10px 14px 14px;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 7px;
   flex-shrink: 0;
-  min-height: 48px;
   border-top: 1px solid var(--color-border);
+  background: var(--color-white);
+  max-height: 140px;
+  overflow-y: auto;
 }
 .foody-chip {
   background: var(--color-white);
   border: 1.5px solid var(--color-border);
   color: var(--color-dark);
   font-family: var(--font-body);
-  font-size: 0.8125rem;
+  font-size: 0.78rem;
   font-weight: 500;
-  padding: 7px 14px;
+  padding: 6px 13px;
   border-radius: var(--radius-full);
   cursor: pointer;
-  transition: var(--transition);
+  transition: border-color 0.2s, color 0.2s, background 0.2s, transform 0.15s;
   white-space: nowrap;
+  line-height: 1.3;
 }
 .foody-chip:hover {
   border-color: var(--color-primary);
@@ -2013,46 +2016,171 @@ section { overflow: hidden; }
   background: var(--color-primary-light);
   transform: translateY(-1px);
 }
-.foody-chip:active { transform: scale(0.96); }
+.foody-chip:active { transform: scale(0.95); }
+
+/* Back-to-menu chip has muted style */
+.foody-chip[data-back] {
+  border-color: transparent;
+  color: var(--color-mid);
+  font-size: 0.74rem;
+}
+.foody-chip[data-back]:hover { border-color: var(--color-border); color: var(--color-dark); background: var(--color-cream); }
 
 
-/* Product recommendation card */
+/* ── Disclaimer card ── */
+.foody-disclaimer-card {
+  background: #F0FAF4;
+  border: 1.5px solid #B8DEC8;
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  font-size: 0.825rem;
+  color: var(--color-dark);
+  line-height: 1.6;
+  animation: foodyMsgIn 0.3s ease;
+}
+.foody-disclaimer-card p { margin: 0 0 8px; }
+.foody-disclaimer-card p:last-child { margin: 0; }
+.foody-disclaimer-note {
+  font-size: 0.775rem;
+  color: #555;
+  border-top: 1px solid #CCE8D8;
+  padding-top: 8px;
+  margin-top: 4px !important;
+}
+.foody-disclaimer-inline {
+  font-size: 0.775rem;
+  color: var(--color-mid);
+  font-style: italic;
+}
+
+
+/* ── Safety / warning card ── */
+.foody-safety-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #FFF8E8;
+  border: 1.5px solid #F4C430;
+  border-radius: var(--radius-md);
+  padding: 13px 14px;
+  font-size: 0.825rem;
+  color: var(--color-dark);
+  line-height: 1.6;
+  animation: foodyMsgIn 0.3s ease;
+}
+.foody-safety-card--urgent {
+  background: #FFF0F0;
+  border-color: #FF6B6B;
+}
+.foody-safety-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.foody-safety-card p { margin: 4px 0 0; }
+
+
+/* ── Contact card ── */
+.foody-contact-card {
+  background: var(--color-primary-light);
+  border: 1.5px solid rgba(74,124,89,0.25);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: foodyMsgIn 0.3s ease;
+}
+.foody-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+.foody-contact-row a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+.foody-contact-row a:hover { text-decoration: underline; }
+
+
+/* ── Product card (inside chat) ── */
 .foody-product-card {
   background: var(--color-primary-light);
-  border: 1.5px solid rgba(74, 124, 89, 0.25);
+  border: 1.5px solid rgba(74,124,89,0.22);
   border-radius: var(--radius-md);
   padding: 14px;
-  margin-top: 4px;
   animation: foodyMsgIn 0.3s ease;
 }
 .foody-product-card-header {
-  display: flex; align-items: center; gap: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
   margin-bottom: 8px;
 }
-.foody-product-emoji { font-size: 2rem; }
+.foody-product-emoji { font-size: 2rem; flex-shrink: 0; }
+.foody-product-info { flex: 1; min-width: 0; }
 .foody-product-name {
-  font-size: 0.875rem; font-weight: 700;
-  color: var(--color-dark); line-height: 1.3;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  line-height: 1.3;
+  margin-bottom: 4px;
 }
+.foody-product-badges { display: flex; gap: 5px; flex-wrap: wrap; }
 .foody-product-badge {
   display: inline-block;
   background: var(--color-primary);
-  color: white; font-size: 0.6875rem; font-weight: 700;
-  padding: 2px 8px; border-radius: var(--radius-full);
-  margin-top: 3px;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+.foody-badge-grey {
+  background: var(--color-border);
+  color: var(--color-mid);
 }
 .foody-product-desc {
-  font-size: 0.8125rem; color: var(--color-mid);
-  margin-bottom: 10px; line-height: 1.5;
+  font-size: 0.8125rem;
+  color: var(--color-mid);
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+.foody-product-ingredients {
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+.foody-product-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.foody-ptag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: rgba(74,124,89,0.12);
+  color: var(--color-primary);
+  padding: 2px 9px;
+  border-radius: var(--radius-full);
 }
 .foody-product-cta {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: var(--color-primary); color: white;
-  font-family: var(--font-body); font-size: 0.8125rem; font-weight: 600;
-  padding: 8px 16px; border-radius: var(--radius-full);
-  border: none; cursor: pointer;
+  display: block;
+  text-align: center;
+  background: var(--color-primary);
+  color: white;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
   text-decoration: none;
-  transition: var(--transition);
+  transition: background 0.2s, transform 0.15s;
 }
 .foody-product-cta:hover {
   background: var(--color-primary-dark);
@@ -2060,34 +2188,55 @@ section { overflow: hidden; }
 }
 
 
-/* Footer row */
+/* ── Ingredient list ── */
+.foody-ingredient-list {
+  margin: 6px 0 6px 16px;
+  padding: 0;
+  font-size: 0.8125rem;
+  color: var(--color-dark);
+  line-height: 1.7;
+}
+.foody-label-note {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--color-mid);
+  font-style: italic;
+  margin-top: 6px;
+}
+
+
+/* ── Footer row ── */
 .foody-footer {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
   border-top: 1px solid var(--color-border);
   background: var(--color-cream);
   flex-shrink: 0;
 }
 .foody-restart {
   display: flex; align-items: center; gap: 5px;
-  font-family: var(--font-body); font-size: 0.8125rem;
+  font-family: var(--font-body); font-size: 0.8rem;
   font-weight: 500; color: var(--color-mid);
   background: none; border: none; cursor: pointer;
   padding: 4px 8px; border-radius: var(--radius-sm);
   transition: var(--transition);
 }
 .foody-restart:hover { color: var(--color-primary); background: var(--color-primary-light); }
-
-.foody-brand { font-size: 0.75rem; color: var(--color-light); }
+.foody-brand { font-size: 0.72rem; color: var(--color-light); }
 .foody-brand strong { color: var(--color-mid); }
 
 
-/* Mobile adjustments */
+/* ── Mobile ── */
 @media (max-width: 480px) {
   .foody-panel {
-    width: calc(100vw - 24px);
-    right: 12px; bottom: 90px;
-    max-height: 70vh;
+    width: calc(100vw - 20px);
+    right: 10px;
+    bottom: 86px;
+    max-height: 75vh;
   }
-  .foody-trigger { right: 16px; bottom: 16px; }
+  .foody-trigger { right: 14px; bottom: 14px; padding: 12px 16px 12px 12px; }
+  .foody-replies { max-height: 120px; }
+  .foody-chip { font-size: 0.75rem; padding: 6px 11px; }
 }
