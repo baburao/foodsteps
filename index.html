@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=50" />
+  <link rel="stylesheet" href="style.css?v=51" />
 </head>
 <body>
 
@@ -325,46 +325,123 @@
   <!-- ═══════════════════════════════════════════
        TESTIMONIALS
   ═══════════════════════════════════════════ -->
-  <section class="testimonials">
+  <section class="testimonials" id="testimonials">
+
+    <!-- Decorative props -->
+    <div class="testi-prop testi-prop--spinach" aria-hidden="true">
+      <svg viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Spinach leaves cluster -->
+        <ellipse cx="100" cy="160" rx="55" ry="85" fill="#5FA870" opacity="0.85" transform="rotate(-20 100 160)"/>
+        <ellipse cx="70" cy="130" rx="42" ry="68" fill="#4A8C5C" opacity="0.75" transform="rotate(-40 70 130)"/>
+        <ellipse cx="130" cy="145" rx="40" ry="62" fill="#6BBF7A" opacity="0.70" transform="rotate(5 130 145)"/>
+        <ellipse cx="95" cy="90" rx="30" ry="50" fill="#4A7C59" opacity="0.65" transform="rotate(-15 95 90)"/>
+        <!-- Stems -->
+        <path d="M100 240 Q95 200 98 160" stroke="#2D6A42" stroke-width="3" stroke-linecap="round"/>
+        <path d="M70 200 Q65 170 68 130" stroke="#2D6A42" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M130 210 Q128 180 130 145" stroke="#2D6A42" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- Leaf veins -->
+        <path d="M100 200 Q115 175 115 155" stroke="#3D7A52" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+        <path d="M100 200 Q85 175 88 155" stroke="#3D7A52" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+        <path d="M70 175 Q80 155 78 130" stroke="#3D7A52" stroke-width="1.2" opacity="0.45" stroke-linecap="round"/>
+        <path d="M70 175 Q60 152 62 130" stroke="#3D7A52" stroke-width="1.2" opacity="0.45" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div class="testi-prop testi-prop--carrot" aria-hidden="true">
+      <svg viewBox="0 0 220 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Carrot 1 (main, center) -->
+        <path d="M110 80 Q125 130 120 200 Q118 230 110 260 Q102 230 100 200 Q95 130 110 80Z" fill="#FF8C42"/>
+        <path d="M110 80 Q120 120 117 180" stroke="#E8762A" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+        <!-- Carrot top greens -->
+        <path d="M110 80 Q100 50 85 30 Q95 55 110 80Z" fill="#4A7C59"/>
+        <path d="M110 80 Q118 48 132 25 Q122 52 110 80Z" fill="#5C9A6A"/>
+        <path d="M110 80 Q108 52 105 20 Q110 50 110 80Z" fill="#4A7C59"/>
+        <path d="M110 80 Q95 55 80 42 Q95 62 110 80Z" fill="#6BBF7A" opacity="0.8"/>
+        <path d="M110 80 Q125 58 138 46 Q124 65 110 80Z" fill="#4A7C59" opacity="0.8"/>
+
+        <!-- Carrot 2 (left, smaller, tilted) -->
+        <g transform="rotate(-25 75 160)">
+          <path d="M75 100 Q86 140 83 195 Q81 218 75 240 Q69 218 67 195 Q64 140 75 100Z" fill="#FF9A5C" opacity="0.85"/>
+          <path d="M75 100 Q72 68 68 42 Q73 68 75 100Z" fill="#4A7C59"/>
+          <path d="M75 100 Q80 66 85 40 Q80 68 75 100Z" fill="#5C9A6A"/>
+          <path d="M75 100 Q77 67 73 35 Q75 65 75 100Z" fill="#4A7C59"/>
+        </g>
+
+        <!-- Carrot 3 (right, smaller, tilted other way) -->
+        <g transform="rotate(20 148 155)">
+          <path d="M148 95 Q158 132 155 182 Q153 204 148 225 Q143 204 141 182 Q138 132 148 95Z" fill="#FFA06B" opacity="0.8"/>
+          <path d="M148 95 Q145 65 140 40 Q145 65 148 95Z" fill="#5C9A6A"/>
+          <path d="M148 95 Q153 62 157 38 Q153 64 148 95Z" fill="#4A7C59"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Handwritten scripts -->
+    <div class="testi-script testi-script--left" aria-hidden="true">Real parents.<br>Brighter days. ♡</div>
+    <div class="testi-script testi-script--right" aria-hidden="true">Little tummies<br>big happiness ♡</div>
+    <div class="testi-script testi-script--bottom" aria-hidden="true">Good food builds bright futures</div>
+
     <div class="container">
-      <div class="section-label fade-in">Parent Love</div>
-      <h2 class="section-title fade-in">What Mums &amp; Dads Say</h2>
 
-      <div class="testimonials-grid">
+      <!-- Section header -->
+      <div class="testi-eyebrow fade-in">REAL FAMILIES. REAL DIFFERENCE.</div>
+      <h2 class="testi-heading fade-in">What Mums &amp; Dads Say</h2>
+      <p class="testi-sub fade-in">Wholesome purees. Happier mealtimes. Brighter tomorrows. Here's what real parents have to say about FoodSteps.</p>
 
-        <div class="testimonial-card fade-in">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"My 8-month-old absolutely loves the Carrot, Apple &amp; Ragi pouch! I love that it's all-natural with no preservatives. It's become a staple in our travel bag."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">P</div>
-            <div>
-              <strong>Priya M.</strong>
-              <span>Mum to 8-month-old, Bengaluru</span>
+      <!-- Cards grid -->
+      <div class="testi-grid">
+
+        <!-- Card 1: Green -->
+        <div class="testi-card testi-card--green fade-in">
+          <div class="testi-quote-mark">"</div>
+          <div class="testi-stars testi-stars--green">★★★★★</div>
+          <p class="testi-text">"FoodSteps has made weaning so much easier for us. My little one takes to every flavour, and I love knowing exactly what's in each pouch. No nasties, just goodness!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar testi-avatar--green">S</div>
+            <div class="testi-author-info">
+              <strong>Sarah L.</strong>
+              <span>Mum of a 7-month-old</span>
             </div>
+          </div>
+          <div class="testi-badge testi-badge--green">
+            <svg viewBox="0 0 16 16" width="13" height="13" fill="none"><path d="M8 14s-5-3.5-5-7a5 5 0 0110 0c0 3.5-5 7-5 7z" fill="#2D6A42"/></svg>
+            HAPPIER MEALTIMES AT HOME
           </div>
         </div>
 
-        <div class="testimonial-card fade-in">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"Finally a baby food brand that doesn't add sugar or preservatives. The Purple Sweet Potato pouch is my daughter's favourite — she literally grabs it out of my hands!"</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">R</div>
-            <div>
-              <strong>Rahul &amp; Sneha K.</strong>
-              <span>Parents of a 10-month-old, Chennai</span>
+        <!-- Card 2: Orange -->
+        <div class="testi-card testi-card--orange fade-in">
+          <div class="testi-quote-mark">"</div>
+          <div class="testi-stars testi-stars--orange">★★★★★</div>
+          <p class="testi-text">"I love that FoodSteps uses real ingredients. You can actually see the goodness in every bite! My son has been thriving ever since we switched to FoodSteps."</p>
+          <div class="testi-author">
+            <div class="testi-avatar testi-avatar--orange">J</div>
+            <div class="testi-author-info">
+              <strong>James T.</strong>
+              <span>Dad of a 9-month-old</span>
             </div>
+          </div>
+          <div class="testi-badge testi-badge--orange">
+            <svg viewBox="0 0 16 16" width="13" height="13" fill="none"><path d="M6 2h4M7 2v4L4 13h8L9 6V2" stroke="#C85520" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            REAL INGREDIENTS REAL PEACE OF MIND
           </div>
         </div>
 
-        <div class="testimonial-card fade-in">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"So convenient for travel! We went on a family trip and FoodSteps pouches saved us. No mess, no fuss, perfectly smooth, and my son loved every single flavour."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">A</div>
-            <div>
-              <strong>Ananya S.</strong>
-              <span>Mum to 7-month-old, Mumbai</span>
+        <!-- Card 3: Purple -->
+        <div class="testi-card testi-card--purple fade-in">
+          <div class="testi-quote-mark">"</div>
+          <div class="testi-stars testi-stars--purple">★★★★★</div>
+          <p class="testi-text">"Such a great variety of flavours! My daughter gets excited at every meal now. The Purple Sweet Potato is her absolute favourite — she can't get enough of it!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar testi-avatar--purple">P</div>
+            <div class="testi-author-info">
+              <strong>Priya K.</strong>
+              <span>Mum of an 8-month-old</span>
             </div>
+          </div>
+          <div class="testi-badge testi-badge--purple">
+            <svg viewBox="0 0 16 16" width="13" height="13" fill="none"><path d="M8 2l1.5 3 3.5.5-2.5 2.5.5 3.5L8 10.5 5 12l.5-3.5L3 6l3.5-.5z" fill="#7B3FA0"/></svg>
+            MORE GOOD FOOD ADVENTURES
           </div>
         </div>
 
