@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=52" />
+  <link rel="stylesheet" href="style.css?v=53" />
 </head>
 <body>
 
@@ -406,58 +406,82 @@
 
 
   <!-- ═══════════════════════════════════════════
-       TRUST BADGES
+       SAFE FOR YOUR LITTLE ONE (Trust)
   ═══════════════════════════════════════════ -->
-  <section class="trust">
-    <div class="container">
-      <h2 class="section-title fade-in">Safe for Your Little One</h2>
-      <p class="section-sub fade-in">Every FoodSteps pouch meets the highest quality and safety standards.</p>
+  <section class="safe" id="safe">
 
-      <div class="trust-grid">
+    <!-- Handwritten script decorations -->
+    <div class="safe-script safe-script--top"   aria-hidden="true">Good food<br>brighter<br>tomorrows ♡</div>
+    <div class="safe-script safe-script--right"  aria-hidden="true">Real ingredients<br>for bright<br>beginnings ♡</div>
+    <div class="safe-script safe-script--bottom" aria-hidden="true">Little choices<br>big tomorrows ♡</div>
 
-        <div class="trust-badge fade-in">
-          <div class="trust-icon">
-            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" fill="#E8F5EE"/><path d="M20 10l7 4v6c0 4-3 7.5-7 9-4-1.5-7-5-7-9v-6l7-4z" fill="#4A7C59" opacity=".3"/><path d="M16 20l3 3 5-5" stroke="#4A7C59" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div class="container safe-inner">
+
+      <!-- Left: eyebrow + heading + feature grid -->
+      <div class="safe-content">
+        <span class="safe-eyebrow fade-in">TRUSTED NUTRITION</span>
+        <h2 class="safe-heading fade-in">Safe for Your<br>Little One</h2>
+        <p class="safe-sub fade-in">Wholesome purees, made with care — so you can feel confident every spoonful is a step in the right direction.</p>
+
+        <div class="safe-grid">
+
+          <div class="safe-card fade-in">
+            <img src="assets/icon_zero.png" alt="" class="safe-card-icon">
+            <div class="safe-card-text">
+              <strong>Zero Added Sugar</strong>
+              <span>Naturally sweet, just as it should be.</span>
+            </div>
           </div>
-          <span>FSSAI Licensed</span>
-        </div>
 
-        <div class="trust-badge fade-in">
-          <div class="trust-icon">
-            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" fill="#E8F5EE"/><circle cx="20" cy="20" r="8" stroke="#4A7C59" stroke-width="2"/><path d="M20 16v4l2.5 2.5" stroke="#4A7C59" stroke-width="2" stroke-linecap="round"/><path d="M14 10l-3-3M26 10l3-3" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <div class="safe-card fade-in">
+            <img src="assets/icon_Nopreserv.png" alt="" class="safe-card-icon">
+            <div class="safe-card-text">
+              <strong>No Preservatives</strong>
+              <span>Pure goodness, nothing artificial.</span>
+            </div>
           </div>
-          <span>Non-GMO</span>
-        </div>
 
-        <div class="trust-badge fade-in">
-          <div class="trust-icon">
-            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" fill="#E8F5EE"/><path d="M12 20h16M20 12v16" stroke="#4A7C59" stroke-width="2.5" stroke-linecap="round"/><circle cx="20" cy="20" r="6" stroke="#4A7C59" stroke-width="2"/><line x1="13" y1="13" x2="27" y2="27" stroke="#F4A261" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <div class="safe-card fade-in">
+            <img src="assets/icon_madefor.png" alt="" class="safe-card-icon">
+            <div class="safe-card-text">
+              <strong>Made for 6+ Months</strong>
+              <span>Age-appropriate nutrition you can trust.</span>
+            </div>
           </div>
-          <span>No Added Sugar</span>
-        </div>
 
-        <div class="trust-badge fade-in">
-          <div class="trust-icon">
-            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" fill="#E8F5EE"/><path d="M15 28s-3-4-3-8a8 8 0 0116 0c0 4-3 8-3 8" stroke="#4A7C59" stroke-width="2" stroke-linecap="round"/><path d="M17 28h6" stroke="#4A7C59" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="17" r="3" fill="#4A7C59" opacity=".4"/></svg>
+          <div class="safe-card fade-in">
+            <img src="assets/icon_Real.png" alt="" class="safe-card-icon">
+            <div class="safe-card-text">
+              <strong>Real Ingredients</strong>
+              <span>Wholesome fruits and veggies, always.</span>
+            </div>
           </div>
-          <span>No Preservatives</span>
-        </div>
 
-        <div class="trust-badge fade-in">
-          <div class="trust-icon">
-            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" fill="#E8F5EE"/><path d="M20 12c-4 0-7 3-7 7 0 3 2 5 4 7h6c2-2 4-4 4-7 0-4-3-7-7-7z" fill="#4A7C59" opacity=".25"/><path d="M17 26l-2 3h10l-2-3" stroke="#4A7C59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 20l3 3 5-6" stroke="#4A7C59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="safe-card fade-in">
+            <img src="assets/icon_Gentle.png" alt="" class="safe-card-icon">
+            <div class="safe-card-text">
+              <strong>Gentle Textures</strong>
+              <span>Smooth, easy to eat, kind on little tummies.</span>
+            </div>
           </div>
-          <span>Gluten Free</span>
-        </div>
 
-        <div class="trust-badge fade-in">
-          <div class="trust-icon">
-            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" fill="#E8F5EE"/><circle cx="20" cy="18" r="5" fill="#4A7C59" opacity=".3"/><path d="M20 13v-3M14.5 15.5l-2-2M25.5 15.5l2-2" stroke="#4A7C59" stroke-width="2" stroke-linecap="round"/><path d="M14 24c1.5-2 3.5-3 6-3s4.5 1 6 3" stroke="#4A7C59" stroke-width="2" stroke-linecap="round"/><path d="M17 28v2M23 28v2" stroke="#4A7C59" stroke-width="2" stroke-linecap="round"/></svg>
+          <div class="safe-card fade-in">
+            <img src="assets/icon_Quality.png" alt="" class="safe-card-icon">
+            <div class="safe-card-text">
+              <strong>Quality Checked</strong>
+              <span>Safety and quality in every batch.</span>
+            </div>
           </div>
-          <span>100% Vegetarian</span>
-        </div>
 
+        </div>
+      </div><!-- /safe-content -->
+
+      <!-- Right: product photo on bg scene -->
+      <div class="safe-visual fade-in">
+        <img src="assets/safe_section_bg.png" alt="" class="safe-bg-img" aria-hidden="true">
+        <img src="assets/Safe_product_photo.png" alt="FoodSteps Spinach, Pea &amp; Apple Puree pouch" class="safe-product-img">
       </div>
+
     </div>
   </section>
 
