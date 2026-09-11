@@ -1392,8 +1392,7 @@ section { overflow: hidden; }
    MARKETPLACE
 ═══════════════════════════════════════════ */
 .marketplace {
-  padding: 80px 0;
-  background: var(--color-dark);
+  display: none;
 }
 
 .marketplace-inner {
