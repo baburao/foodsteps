@@ -1234,9 +1234,9 @@ section { overflow: hidden; }
 
 .about-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 2fr;
   align-items: center;
-  gap: 64px;
+  gap: 48px;
 }
 
 /* Container above fog overlay */
