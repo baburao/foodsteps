@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20" />
+  <link rel="stylesheet" href="style.css?v=43" />
 </head>
 <body>
 
@@ -126,56 +126,47 @@
        WHY FOODSTEPS
   ═══════════════════════════════════════════ -->
   <section class="why" id="why">
+
+    <!-- Background -->
+    <img src="assets/section_2-bg.png" class="why-bg" aria-hidden="true" alt="">
+
+    <!-- Side props -->
+    <img src="assets/section_2_left_prop.png"      class="why-prop why-prop--left"  aria-hidden="true" alt="">
+    <img src="assets/section_2_rightside-prop.png" class="why-prop why-prop--right" aria-hidden="true" alt="">
+
     <div class="container">
-      <div class="section-label fade-in">Our Promise</div>
-      <h2 class="section-title fade-in">Why Parents Choose FoodSteps</h2>
-      <p class="section-sub fade-in">Every pouch is a step toward a lifetime of healthy eating habits — crafted with love, backed by science.</p>
 
-      <div class="why-board-outer">
-
-        <!-- Single overlay SVG: all 3 dashed connectors -->
-        <svg class="why-connectors" viewBox="0 0 1140 520" preserveAspectRatio="none" fill="none" aria-hidden="true">
-          <path d="M 300 192 C 520 260, 740 65, 860 108" stroke="#B8CCBA" stroke-width="2.5" stroke-dasharray="10 7" stroke-linecap="round"/>
-          <path d="M 860 295 C 720 355, 490 240, 300 265" stroke="#D4C4B0" stroke-width="2.5" stroke-dasharray="10 7" stroke-linecap="round"/>
-          <path d="M 300 435 C 490 492, 720 335, 860 362" stroke="#C4B8D8" stroke-width="2.5" stroke-dasharray="10 7" stroke-linecap="round"/>
-        </svg>
-
-        <div class="why-board">
-
-          <!-- Left column: notes 01 and 03 -->
-          <div class="why-col why-col--left">
-            <div class="why-note why-note--1 why-note--green fade-in">
-              <div class="why-pin why-pin--green"></div>
-              <span class="why-num">01</span>
-              <h3 class="why-note-title">Made with Love</h3>
-              <p class="why-note-body">100% natural and vegetarian — non-GMO, no added sugar, no gluten, no artificial colours or preservatives. Just pure goodness in every bite.</p>
-            </div>
-            <div class="why-note why-note--3 why-note--lavender fade-in">
-              <div class="why-pin why-pin--purple"></div>
-              <span class="why-num">03</span>
-              <h3 class="why-note-title">Enhances Taste Buds</h3>
-              <p class="why-note-body">A diverse range of delicious purees introducing your little one to a world of flavours — smooth, consistent texture loved by babies everywhere.</p>
-            </div>
-          </div>
-
-          <!-- Right column: notes 02 and 04 (offset down) -->
-          <div class="why-col why-col--right">
-            <div class="why-note why-note--2 why-note--peach fade-in">
-              <div class="why-pin why-pin--orange"></div>
-              <span class="why-num">02</span>
-              <h3 class="why-note-title">Yummy &amp; Travel Friendly</h3>
-              <p class="why-note-body">Small, compact, ready-to-eat pouches that fit right in your bag. Perfect for road trips, quick outings, and every adventure in between.</p>
-            </div>
-            <div class="why-note why-note--4 why-note--blue fade-in">
-              <div class="why-pin why-pin--blue"></div>
-              <span class="why-num">04</span>
-              <h3 class="why-note-title">Safe &amp; FSSAI Certified</h3>
-              <p class="why-note-body">FSSAI licensed, zero artificial preservatives, made in a hygienically controlled facility — because your baby deserves only the safest start.</p>
-            </div>
-          </div>
-
-        </div>
+      <!-- Section header -->
+      <div class="why-header">
+        <span class="why-eyebrow fade-in">A BRIGHTER TOMORROW, TOGETHER</span>
+        <h2 class="why-title fade-in">Why Parents Choose FoodSteps</h2>
+        <p class="why-sub fade-in">Real nutrition. Happy little tummies. A healthier tomorrow.</p>
       </div>
+
+      <!-- 4-card row — image cards -->
+      <div class="why-cards-wrap">
+
+        <div class="why-img-card fade-in">
+          <img src="assets/made_with_love.png" alt="Made with Love — Real fruits and veggies in every bite">
+        </div>
+
+        <div class="why-img-card fade-in">
+          <img src="assets/enhances.png" alt="Enhances Taste Buds — Helps little ones explore real flavours early">
+        </div>
+
+        <div class="why-img-card fade-in">
+          <img src="assets/yummy.png" alt="Yummy & Travel Friendly — Nutritious goodness anytime, anywhere">
+        </div>
+
+        <div class="why-img-card fade-in">
+          <img src="assets/safe.png" alt="Safe & FSSAI Certified — Made with care, meeting the highest safety standards">
+        </div>
+
+      </div>
+
+      <!-- Bottom handwritten note -->
+      <div class="why-handwritten-bottom" aria-hidden="true">Small bites<br>Brighter tomorrows ♡</div>
+
     </div>
   </section>
 
@@ -184,96 +175,79 @@
        PRODUCTS SECTION
   ═══════════════════════════════════════════ -->
   <section class="products" id="products">
+
+    <!-- Background -->
+    <img src="assets/section_3_bg.png" class="products-bg" aria-hidden="true" alt="">
+
     <div class="container">
-      <div class="section-label fade-in">Our Range</div>
-      <h2 class="section-title fade-in">Pure Flavours, Happy Babies</h2>
-      <p class="section-sub fade-in">Superfood combinations designed by nutrition experts — each pouch is 100g with a spoon included.</p>
 
-      <div class="products-grid">
-
-        <!-- Card 1: Pumpkin, Carrot & Apple -->
-        <div class="pcard fade-in">
-          <div class="pcard-float">
-            <img src="assets/orange-pack.png" alt="Pumpkin, Carrot & Apple Puree" class="pcard-img">
-            <div class="pcard-badge">
-              <span class="pcard-badge-label">6m+</span>
-              <span class="pcard-badge-val">100g</span>
-            </div>
-          </div>
-          <div class="pcard-body pcard-body--orange">
-            <div class="pcard-heading">
-              <span class="pcard-sub">Pumpkin, Carrot</span>
-              <h3 class="pcard-title">&amp; Apple Puree</h3>
-            </div>
-            <div class="pcard-rating">
-              <span class="pcard-stars">★★★★★</span>
-              <span class="pcard-rating-val">4.9 &nbsp;·&nbsp; 214 reviews</span>
-            </div>
-            <p class="pcard-desc">Sweet pumpkin and carrot provide beta-carotene and natural sweetness, while apple adds a gentle fruity freshness. A nourishing first puree.</p>
-            <div class="pcard-tags">
-              <span>Pumpkin</span><span>Carrot</span><span>Apple</span>
-            </div>
-            <a href="https://www.amazon.in" target="_blank" rel="noopener" class="pcard-btn">Buy on Amazon</a>
-          </div>
+      <!-- Section header -->
+      <div class="products-header">
+        <span class="products-eyebrow fade-in">SMALL BITES. BRIGHTER TOMORROWS.</span>
+        <h2 class="products-title fade-in">Pure Flavours, Happy Babies.</h2>
+        <p class="products-sub fade-in">Wholesome fruit and veggie purees made with real ingredients<br>for curious little ones and confident parents.</p>
+        <!-- Handwritten accent -->
+        <div class="products-script" aria-hidden="true">Goodness<br>in every bite ♡</div>
+        <!-- Dashes decoration -->
+        <div class="products-dashes" aria-hidden="true">
+          <svg viewBox="0 0 60 30" fill="none" width="52" height="26"><line x1="0" y1="8"  x2="20" y2="8"  stroke="#3D7A56" stroke-width="2.5" stroke-linecap="round"/><line x1="0" y1="15" x2="30" y2="15" stroke="#3D7A56" stroke-width="2.5" stroke-linecap="round"/><line x1="0" y1="22" x2="20" y2="22" stroke="#3D7A56" stroke-width="2.5" stroke-linecap="round"/></svg>
         </div>
-
-        <!-- Card 2: Purple Sweet Potato, Banana & Dates (Best Seller) -->
-        <div class="pcard fade-in">
-          <div class="pcard-float">
-            <img src="assets/purple-pack.png" alt="Purple Sweet Potato, Banana & Dates Puree" class="pcard-img">
-            <div class="pcard-badge">
-              <span class="pcard-badge-label">Best</span>
-              <span class="pcard-badge-val">Seller</span>
-            </div>
-          </div>
-          <div class="pcard-body pcard-body--purple">
-            <div class="pcard-heading">
-              <span class="pcard-sub">Purple Sweet Potato,</span>
-              <h3 class="pcard-title">Banana &amp; Dates</h3>
-            </div>
-            <div class="pcard-rating">
-              <span class="pcard-stars">★★★★★</span>
-              <span class="pcard-rating-val">4.8 &nbsp;·&nbsp; 389 reviews</span>
-            </div>
-            <p class="pcard-desc">Naturally sweet dates, energy-rich banana, and antioxidant-packed purple sweet potato — a vibrant, wholesome blend babies love.</p>
-            <div class="pcard-tags">
-              <span>Purple Sweet Potato</span><span>Banana</span><span>Dates</span>
-            </div>
-            <a href="https://www.amazon.in" target="_blank" rel="noopener" class="pcard-btn">Buy on Amazon</a>
-          </div>
-        </div>
-
-        <!-- Card 3: Spinach, Pea & Apple -->
-        <div class="pcard fade-in">
-          <div class="pcard-float">
-            <img src="assets/green-pack.png" alt="Spinach, Pea & Apple Puree" class="pcard-img">
-            <div class="pcard-badge">
-              <span class="pcard-badge-label">6m+</span>
-              <span class="pcard-badge-val">100g</span>
-            </div>
-          </div>
-          <div class="pcard-body pcard-body--green">
-            <div class="pcard-heading">
-              <span class="pcard-sub">Spinach, Pea</span>
-              <h3 class="pcard-title">&amp; Apple Puree</h3>
-            </div>
-            <div class="pcard-rating">
-              <span class="pcard-stars">★★★★★</span>
-              <span class="pcard-rating-val">4.7 &nbsp;·&nbsp; 176 reviews</span>
-            </div>
-            <p class="pcard-desc">Iron-rich spinach and protein-packed peas meet sweet green apple — a vibrant, veggie-forward blend for growing babies.</p>
-            <div class="pcard-tags">
-              <span>Spinach</span><span>Pea</span><span>Apple</span>
-            </div>
-            <a href="https://www.amazon.in" target="_blank" rel="noopener" class="pcard-btn">Buy on Amazon</a>
-          </div>
-        </div>
-
       </div>
 
-      <div class="products-more fade-in">
-        <p>Also available in Mango, Pumpkin, Spinach &amp; Pea, Papaya and more</p>
-        <a href="https://www.amazon.in" target="_blank" rel="noopener" class="btn btn-outline">View All Products →</a>
+      <!-- 3 product cards -->
+      <div class="s3-grid">
+
+        <!-- Card 1: Spinach, Pea & Apple -->
+        <div class="s3-card s3-card--green fade-in">
+          <div class="s3-card-img-wrap">
+            <img src="assets/S3_spinach.png" alt="Spinach, Pea & Apple Puree">
+          </div>
+          <div class="s3-card-body">
+            <h3 class="s3-card-title s3-card-title--green">Spinach, Pea &amp; Apple Puree</h3>
+            <p class="s3-card-desc">A gentle green blend for growing explorers.</p>
+            <div class="s3-card-meta">
+              <span><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><path d="M8 15S2 10 2 6a6 6 0 0 1 12 0c0 4-6 9-6 9z" stroke="#4A7C59" stroke-width="1.5"/></svg> 100g</span>
+              <span class="s3-meta-divider">|</span>
+              <span><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><circle cx="8" cy="6" r="3.5" stroke="#4A7C59" stroke-width="1.5"/><path d="M3 14c0-2.76 2.24-5 5-5s5 2.24 5 5" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round"/></svg> 6+ months</span>
+            </div>
+            <a href="https://www.amazon.in" target="_blank" rel="noopener" class="s3-btn s3-btn--green">View Details →</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Pumpkin, Carrot & Apple -->
+        <div class="s3-card s3-card--orange fade-in">
+          <div class="s3-card-img-wrap">
+            <img src="assets/S3_pumpkin.png" alt="Pumpkin, Carrot & Apple Puree">
+          </div>
+          <div class="s3-card-body">
+            <h3 class="s3-card-title s3-card-title--orange">Pumpkin, Carrot &amp; Apple Puree</h3>
+            <p class="s3-card-desc">A naturally sweet blend for happy, healthy days.</p>
+            <div class="s3-card-meta">
+              <span><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><path d="M8 15S2 10 2 6a6 6 0 0 1 12 0c0 4-6 9-6 9z" stroke="#C8621A" stroke-width="1.5"/></svg> 100g</span>
+              <span class="s3-meta-divider">|</span>
+              <span><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><circle cx="8" cy="6" r="3.5" stroke="#C8621A" stroke-width="1.5"/><path d="M3 14c0-2.76 2.24-5 5-5s5 2.24 5 5" stroke="#C8621A" stroke-width="1.5" stroke-linecap="round"/></svg> 6+ months</span>
+            </div>
+            <a href="https://www.amazon.in" target="_blank" rel="noopener" class="s3-btn s3-btn--orange">View Details →</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Purple Sweet Potato, Banana & Dates -->
+        <div class="s3-card s3-card--purple fade-in">
+          <div class="s3-card-img-wrap">
+            <img src="assets/S3_potoato.png" alt="Purple Sweet Potato, Banana & Dates Puree">
+          </div>
+          <div class="s3-card-body">
+            <h3 class="s3-card-title s3-card-title--purple">Purple Sweet Potato, Banana &amp; Dates Puree</h3>
+            <p class="s3-card-desc">A deliciously smooth blend for bright tomorrows.</p>
+            <div class="s3-card-meta">
+              <span><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><path d="M8 15S2 10 2 6a6 6 0 0 1 12 0c0 4-6 9-6 9z" stroke="#7B3FA0" stroke-width="1.5"/></svg> 100g</span>
+              <span class="s3-meta-divider">|</span>
+              <span><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><circle cx="8" cy="6" r="3.5" stroke="#7B3FA0" stroke-width="1.5"/><path d="M3 14c0-2.76 2.24-5 5-5s5 2.24 5 5" stroke="#7B3FA0" stroke-width="1.5" stroke-linecap="round"/></svg> 6+ months</span>
+            </div>
+            <a href="https://www.amazon.in" target="_blank" rel="noopener" class="s3-btn s3-btn--purple">View Details →</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -661,6 +635,6 @@
 
   </div>
 
-  <script src="script.js?v=14"></script>
+  <script src="script.js?v=17"></script>
 </body>
 </html>

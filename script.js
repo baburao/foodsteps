@@ -2,7 +2,7 @@
    FOODSTEPS — script.js
 ═══════════════════════════════════════════ */
 
-/* ── Navbar: shadow on scroll ── */
+/* ── Navbar: floating pill on scroll ── */
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 10);
@@ -85,6 +85,34 @@ const sectionObserver = new IntersectionObserver(
   { rootMargin: '-40% 0px -55% 0px' }
 );
 sections.forEach(s => sectionObserver.observe(s));
+
+
+/* ── 3D tilt on product cards ── */
+document.querySelectorAll('.s3-card').forEach(card => {
+  const MAX_TILT = 5; // degrees — subtle
+
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const cx = rect.width  / 2;
+    const cy = rect.height / 2;
+    const rotateY =  ((x - cx) / cx) * MAX_TILT;
+    const rotateX = -((y - cy) / cy) * MAX_TILT;
+    card.style.transform =
+      `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px) scale(1.02)`;
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+    card.style.transform  = 'perspective(900px) rotateX(0deg) rotateY(0deg) translateY(0) scale(1)';
+    setTimeout(() => { card.style.transition = ''; }, 500);
+  });
+
+  card.addEventListener('mouseenter', () => {
+    card.style.transition = 'transform 0.1s ease';
+  });
+});
 
 
 /* ── Contact form submit ── */
