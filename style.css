@@ -1435,23 +1435,25 @@ section { overflow: hidden; }
   overflow: hidden;
 }
 
-/* Decorative vegetable props */
+/* Decorative vegetable props (img placeholders — swap src once assets arrive) */
 .testi-prop {
   position: absolute;
   pointer-events: none;
   z-index: 0;
+  /* Hide broken-image icon while asset is missing */
+  min-width: 0; min-height: 0;
 }
 .testi-prop--spinach {
   top: -30px;
   left: -50px;
   width: 230px;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 .testi-prop--carrot {
   bottom: -20px;
   right: -40px;
   width: 210px;
-  opacity: 0.75;
+  opacity: 0.85;
 }
 
 /* Handwritten script decorations */
