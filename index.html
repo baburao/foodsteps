@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=17" />
+  <link rel="stylesheet" href="style.css?v=18" />
 </head>
 <body>
 
@@ -22,14 +22,21 @@
       </a>
 
       <nav class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
+        <a href="#about">Our Story</a>
+        <a href="#products">Our Purees</a>
         <a href="#why">Why FoodSteps</a>
-        <a href="#products">Products</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Parenting Tips</a>
       </nav>
 
-      <a href="#products" class="btn btn-primary nav-cta">Shop Now</a>
+      <div class="nav-actions">
+        <button class="nav-icon-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M16.5 16.5l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <button class="nav-icon-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2"/><path d="M16 10a4 4 0 01-8 0" stroke="currentColor" stroke-width="2"/></svg>
+        </button>
+        <a href="#products" class="btn btn-primary nav-cta">Shop Now</a>
+      </div>
 
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -43,181 +50,75 @@
     <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
     <img src="assets/logo.png" alt="FoodSteps" class="mobile-logo" />
     <nav class="mobile-nav">
-      <a href="#home">Home</a>
+      <a href="#about">Our Story</a>
+      <a href="#products">Our Purees</a>
       <a href="#why">Why FoodSteps</a>
-      <a href="#products">Products</a>
-      <a href="#about">About Us</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact">Parenting Tips</a>
     </nav>
     <a href="#products" class="btn btn-primary">Shop Now</a>
   </div>
 
 
   <!-- ═══════════════════════════════════════════
-       HERO SECTION — Reference redesign
+       HERO SECTION
   ═══════════════════════════════════════════ -->
   <section class="hero" id="home">
+    <div class="container hero-v2">
 
-    <!-- Top: two-column headline row -->
-    <div class="container hero-top">
-      <div class="hero-top-left fade-in">
-        <span class="hero-eyebrow">ORGANIC BABY FOOD</span>
+      <!-- LEFT: copy + CTAs + trust -->
+      <div class="hero-v2-left fade-in">
+        <span class="hero-eyebrow">REAL INGREDIENTS. BRIGHTER TOMORROWS.</span>
+
         <h1 class="hero-headline">
-          Discover the joy of
-          <span class="hero-underline-wrap">
-            pure nourishment
-            <svg class="hero-underline-svg" viewBox="0 0 320 14" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 10 C30 2, 65 14, 100 7 C135 0, 165 14, 200 7 C235 0, 270 14, 318 5" stroke="#4A7C59" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-            </svg>
-          </span>
-          <br>on your terms
+          Discover the joy of<br>
+          pure nourishment<br>
+          on your terms
+          <svg class="hero-heart" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="32">
+            <path d="M16 25.5S2 17 2 8.5a7 7 0 0 1 14 0 7 7 0 0 1 14 0C30 17 16 25.5 16 25.5z" stroke="#4A7C59" stroke-width="2.5" fill="none"/>
+          </svg>
         </h1>
-      </div>
 
-      <div class="hero-top-right fade-in fade-in-delay">
         <p class="hero-sub">
-          Get organic purees, travel-friendly pouches, and superfood blends — all in one natural solution for your little one.
+          Wholesome fruit and veggie purees made with real ingredients for curious little ones and confident parents.
         </p>
-        <a href="#products" class="btn-dark-pill">
-          Shop Now
-          <span class="dark-pill-arrow">
-            <svg viewBox="0 0 20 20" fill="none" width="16" height="16"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </a>
-      </div>
-    </div>
 
-    <!-- Bottom: three category cards -->
-    <div class="container hero-cards-row" id="heroCardsRow" data-active="0">
-
-      <!-- Card 0: Starters — default active -->
-      <div class="hcard hcard--warm hcard--active fade-in" data-card="0">
-        <div class="hcard-mid-blob"></div>
-
-        <!-- Collapsed (shown when inactive) -->
-        <div class="hcard-inner-collapsed">
-          <div class="hcard-rotated-wrap">
-            <span class="hcard-rotated-text">Starters</span>
-            <span class="hcard-rotated-sub">6+ months</span>
-          </div>
-          <div class="hcard-mid-img">
-            <img src="assets/pumpkin.png" alt="Pumpkin">
-          </div>
+        <div class="hero-cta-row">
+          <a href="#products" class="btn-dark-pill">
+            Shop Now
+            <span class="dark-pill-arrow">
+              <svg viewBox="0 0 20 20" fill="none" width="16" height="16"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+          <a href="#products" class="hero-explore-link">
+            Explore Flavours
+            <svg viewBox="0 0 20 20" fill="none" width="15" height="15"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
 
-        <!-- Expanded (shown when active) -->
-        <div class="hcard-inner-expanded">
-          <div class="hcard-label">Starters</div>
-          <p class="hcard-desc">Pumpkin, Carrot &amp; Apple — gentle, naturally sweet and rich in beta-carotene. The perfect first food for tiny tummies from 6 months.</p>
-          <div class="hcard-ui">
-            <div class="hcard-ui-row">
-              <div class="hcard-ui-btn hcard-ui-btn--img"><img src="assets/pumpkin.png" alt="Pumpkin"></div>
-              <div class="hcard-ui-btn hcard-ui-btn--img"><img src="assets/carrot.png" alt="Carrot"></div>
-              <div class="hcard-ui-btn hcard-ui-btn--img"><img src="assets/red-apple.png" alt="Apple"></div>
-            </div>
-            <div class="hcard-ui-row">
-              <div class="hcard-ui-tag">100g · Spoon included</div>
-              <div class="hcard-ui-tag">Zero added sugar</div>
-            </div>
+        <div class="hero-trust-row">
+          <div class="hero-trust-item">
+            <svg viewBox="0 0 24 24" fill="none" width="22" height="22"><path d="M12 2C8 2 4 6 4 10c0 5.5 8 12 8 12s8-6.5 8-12c0-4-4-8-8-8z" stroke="#4A7C59" stroke-width="1.8" fill="none"/></svg>
+            <span>Zero<br>added sugar</span>
           </div>
-          <div class="hcard-visual">
-            <img src="assets/pumpkin.png" class="hcard-img hcard-img-1" alt="Pumpkin">
-            <img src="assets/carrot.png" class="hcard-img hcard-img-2" alt="Carrot">
-            <img src="assets/red-apple.png" class="hcard-img hcard-img-3" alt="Apple">
+          <div class="hero-trust-divider"></div>
+          <div class="hero-trust-item">
+            <svg viewBox="0 0 24 24" fill="none" width="22" height="22"><path d="M9 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2h-2M9 3a2 2 0 002 2h2a2 2 0 002-2M9 3h6" stroke="#4A7C59" stroke-width="1.8" stroke-linecap="round"/><path d="M9 12h.01M12 12h.01M15 12h.01M9 16h.01M12 16h.01M15 16h.01" stroke="#4A7C59" stroke-width="2" stroke-linecap="round"/></svg>
+            <span>No<br>preservatives</span>
           </div>
-          <button class="hcard-arrow" onclick="document.querySelector('#products').scrollIntoView({behavior:'smooth'})">
-            <svg viewBox="0 0 20 20" fill="none" width="18" height="18"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="hcard-age-badge">6m+</div>
+          <div class="hero-trust-divider"></div>
+          <div class="hero-trust-item">
+            <svg viewBox="0 0 24 24" fill="none" width="22" height="22"><circle cx="12" cy="8" r="4" stroke="#4A7C59" stroke-width="1.8"/><path d="M8 14c-2.5 1-4 3-4 5h16c0-2-1.5-4-4-5" stroke="#4A7C59" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <span>Made for<br>6+ months</span>
+          </div>
         </div>
       </div>
 
-      <!-- Card 1: Explorers -->
-      <div class="hcard hcard--orange fade-in" data-card="1">
-        <div class="hcard-mid-blob"></div>
-
-        <!-- Collapsed -->
-        <div class="hcard-inner-collapsed">
-          <div class="hcard-rotated-wrap">
-            <span class="hcard-rotated-text">Explorers</span>
-            <span class="hcard-rotated-sub">6+ months</span>
-          </div>
-          <div class="hcard-mid-img">
-            <img src="assets/purple-sweet-potato.png" alt="Purple Sweet Potato">
-          </div>
-        </div>
-
-        <!-- Expanded -->
-        <div class="hcard-inner-expanded">
-          <div class="hcard-label">Explorers</div>
-          <p class="hcard-desc">Purple Sweet Potato, Banana &amp; Dates — naturally sweet, energy-rich and packed with antioxidants for curious little explorers.</p>
-          <div class="hcard-ui">
-            <div class="hcard-ui-row">
-              <div class="hcard-ui-btn hcard-ui-btn--img"><img src="assets/purple-sweet-potato.png" alt="Sweet Potato"></div>
-              <div class="hcard-ui-btn hcard-ui-btn--img"><img src="assets/banana.png" alt="Banana"></div>
-              <div class="hcard-ui-btn hcard-ui-btn--img"><img src="assets/dates.png" alt="Dates"></div>
-            </div>
-            <div class="hcard-ui-row">
-              <div class="hcard-ui-tag">Antioxidant-rich</div>
-              <div class="hcard-ui-tag">Natural energy</div>
-            </div>
-          </div>
-          <div class="hcard-visual">
-            <img src="assets/purple-sweet-potato.png" class="hcard-img hcard-img-1" alt="Sweet Potato">
-            <img src="assets/banana.png" class="hcard-img hcard-img-2" alt="Banana">
-            <img src="assets/dates.png" class="hcard-img hcard-img-3" alt="Dates">
-          </div>
-          <button class="hcard-arrow" onclick="document.querySelector('#products').scrollIntoView({behavior:'smooth'})">
-            <svg viewBox="0 0 20 20" fill="none" width="18" height="18"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="hcard-age-badge">6m+</div>
-        </div>
-      </div>
-
-      <!-- Card 2: Toddlers -->
-      <div class="hcard hcard--green fade-in" data-card="2">
-        <div class="hcard-mid-blob"></div>
-
-        <!-- Collapsed -->
-        <div class="hcard-inner-collapsed">
-          <div class="hcard-rotated-wrap">
-            <span class="hcard-rotated-text">Toddlers</span>
-            <span class="hcard-rotated-sub">6+ months</span>
-          </div>
-          <div class="hcard-mid-img">
-            <img src="assets/spinach.png" alt="Spinach">
-          </div>
-        </div>
-
-        <!-- Expanded -->
-        <div class="hcard-inner-expanded">
-          <div class="hcard-label">Toddlers</div>
-          <p class="hcard-desc">Spinach, Pea &amp; Apple — iron-rich greens blended with sweet apple for a wholesome, vitamin-packed puree little ones love.</p>
-          <div class="hcard-ui">
-            <div class="hcard-ui-row">
-              <div class="hcard-ui-btn hcard-ui-btn--img"><img src="assets/spinach.png" alt="Spinach"></div>
-              <div class="hcard-ui-btn hcard-ui-btn--img"><img src="assets/peas.png" alt="Peas"></div>
-              <div class="hcard-ui-btn hcard-ui-btn--img"><img src="assets/green-apple.png" alt="Apple"></div>
-            </div>
-            <div class="hcard-ui-row">
-              <div class="hcard-ui-tag">Iron-rich</div>
-              <div class="hcard-ui-tag">Vitamin C &amp; K</div>
-            </div>
-          </div>
-          <div class="hcard-visual">
-            <img src="assets/spinach.png" class="hcard-img hcard-img-1" alt="Spinach">
-            <img src="assets/peas.png" class="hcard-img hcard-img-2" alt="Peas">
-            <img src="assets/green-apple.png" class="hcard-img hcard-img-3" alt="Apple">
-          </div>
-          <button class="hcard-arrow" onclick="document.querySelector('#products').scrollIntoView({behavior:'smooth'})">
-            <svg viewBox="0 0 20 20" fill="none" width="18" height="18"><path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="hcard-age-badge">6m+</div>
-        </div>
+      <!-- RIGHT: hero banner image -->
+      <div class="hero-v2-right fade-in fade-in-delay">
+        <img src="assets/Hero_banner.png" alt="FoodSteps — Pumpkin Carrot Apple, Purple Sweet Potato Banana Dates, and Spinach Pea Apple puree pouches with fresh ingredients" class="hero-banner-img">
       </div>
 
     </div>
-
   </section>
 
 
