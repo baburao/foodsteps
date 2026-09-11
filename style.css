@@ -1716,34 +1716,46 @@ section { overflow: hidden; }
 
 .safe-card {
   display: flex;
+  flex-direction: row;
   align-items: flex-start;
-  gap: 10px;
-  background: rgba(255,255,255,0.82);
-  border-radius: 16px;
-  padding: 12px 12px 12px 10px;
-  backdrop-filter: blur(6px);
+  gap: 14px;
+  border-radius: 20px;
+  padding: 18px 16px;
   transition: var(--transition);
 }
 .safe-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 
+/* Per-card tinted backgrounds matching icon colors */
+.safe-card:nth-child(1) { background: rgba(166,214,182,0.30); }  /* green  — Zero Sugar    */
+.safe-card:nth-child(2) { background: rgba(232,118,42,0.13);  }  /* orange — No Preserv.  */
+.safe-card:nth-child(3) { background: rgba(155,93,229,0.11);  }  /* purple — 6+ Months    */
+.safe-card:nth-child(4) { background: rgba(166,214,182,0.30); }  /* green  — Real Ingred. */
+.safe-card:nth-child(5) { background: rgba(255,200,60,0.16);  }  /* yellow — Gentle Text. */
+.safe-card:nth-child(6) { background: rgba(166,214,182,0.30); }  /* green  — Quality Chk  */
+
 .safe-card-icon {
-  width: 54px; height: 54px;
+  width: 64px; height: 64px;
   flex-shrink: 0;
   object-fit: contain;
+  margin-top: 2px;
 }
 
+.safe-card-text {
+  flex: 1;
+  min-width: 0;
+}
 .safe-card-text strong {
   display: block;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #1A1A1A;
-  line-height: 1.3;
-  margin-bottom: 3px;
+  line-height: 1.25;
+  margin-bottom: 5px;
 }
 .safe-card-text span {
-  font-size: 0.78rem;
+  font-size: 0.8125rem;
   color: var(--color-mid);
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 
