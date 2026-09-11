@@ -1211,7 +1211,25 @@ section { overflow: hidden; }
 .about {
   padding: 100px 0;
   background: #FEFAF2;
+  position: relative;
   overflow: hidden;
+}
+
+/* Top fog — seamlessly blends in from Products section bottom */
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 220px;
+  background: linear-gradient(
+    to bottom,
+    #F9EEE2 0%,
+    rgba(249, 238, 226, 0.80) 35%,
+    rgba(249, 238, 226, 0.30) 65%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
 }
 
 .about-inner {
@@ -1219,6 +1237,12 @@ section { overflow: hidden; }
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 64px;
+}
+
+/* Container above fog overlay */
+.about > .container {
+  position: relative;
+  z-index: 2;
 }
 
 /* ── Left: Visual / blob photo ── */
