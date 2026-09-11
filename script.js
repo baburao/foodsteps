@@ -159,16 +159,15 @@ document.head.appendChild(style);
 
 /* ── Product data ── */
 const PRODUCTS = {
-  carrot: {
-    key: 'carrot',
-    emoji: '🥕🍎',
-    name: 'Carrot, Apple & Ragi',
+  pumpkin: {
+    key: 'pumpkin',
+    name: 'Pumpkin, Carrot & Apple Puree',
     age: '6m+',
     ageMonths: 6,
     size: '100g',
-    ingredients: ['Carrot', 'Apple', 'Ragi (Finger Millet)'],
-    tags: ['First food', 'Veggie-fruit blend', 'Iron-rich Ragi'],
-    desc: 'Carrot provides essential beta-carotene, apple adds natural sweetness, and Ragi is a wholesome grain that supports healthy growth. A nourishing first puree for curious little eaters.',
+    ingredients: ['Pumpkin', 'Carrot', 'Apple'],
+    tags: ['First food', 'Beta-carotene rich', 'Naturally sweet'],
+    desc: 'Sweet pumpkin and carrot are rich in beta-carotene for healthy vision and growth, while apple adds a gentle fruity freshness. A nourishing, easy-to-digest first puree.',
     marketplaceLink: 'https://www.amazon.in',
     allergensNote: 'Please check the pouch label before serving, especially if your child has known food sensitivities.',
     noAddedSugar: true,
@@ -177,35 +176,33 @@ const PRODUCTS = {
   },
   sweetpotato: {
     key: 'sweetpotato',
-    emoji: '🍠🍌',
-    name: 'Purple Sweet Potato, Banana & Dates',
-    age: '9m+',
-    ageMonths: 9,
+    name: 'Purple Sweet Potato, Banana & Dates Puree',
+    age: '6m+',
+    ageMonths: 6,
     size: '100g',
     ingredients: ['Purple Sweet Potato', 'Banana', 'Dates'],
-    tags: ['Naturally sweet', 'Energy', 'Best seller'],
-    desc: 'Natural sweetness from dates, steady energy from banana, and antioxidant-rich purple sweet potato. A great blend for babies exploring richer flavours from 9 months.',
+    tags: ['Naturally sweet', 'Energy-rich', 'Best seller'],
+    desc: 'Natural sweetness from dates, steady energy from banana, and powerful antioxidants from purple sweet potato. A vibrant, wholesome blend babies love from 6 months.',
     marketplaceLink: 'https://www.amazon.in',
     allergensNote: 'Please check the pouch label before serving, especially if your child has known food sensitivities.',
     noAddedSugar: true,
     noPreservatives: true,
     glutenFree: true,
   },
-  banana: {
-    key: 'banana',
-    emoji: '🍌🍓',
-    name: 'Banana, Strawberry & Oats',
-    age: '12m+',
-    ageMonths: 12,
+  spinach: {
+    key: 'spinach',
+    name: 'Spinach, Pea & Apple Puree',
+    age: '6m+',
+    ageMonths: 6,
     size: '100g',
-    ingredients: ['Banana', 'Strawberry', 'Oats'],
-    tags: ['Fruit blend', 'Oats', 'Toddler-friendly'],
-    desc: 'Banana for natural energy, strawberry for a vitamin C boost, and oats for gentle fibre. A flavour-rich blend designed for growing toddlers from 12 months.',
+    ingredients: ['Spinach', 'Pea', 'Apple'],
+    tags: ['Iron-rich', 'Veggie-packed', 'Protein boost'],
+    desc: 'Iron-rich spinach and protein-packed peas meet the gentle sweetness of green apple — a vibrant, veggie-forward blend for growing babies from 6 months.',
     marketplaceLink: 'https://www.amazon.in',
-    allergensNote: 'Contains Oats. Please check the pouch label before serving, especially if your child has known food sensitivities.',
+    allergensNote: 'Please check the pouch label before serving, especially if your child has known food sensitivities.',
     noAddedSugar: true,
     noPreservatives: true,
-    glutenFree: false,
+    glutenFree: true,
   },
 };
 
@@ -241,15 +238,15 @@ function recommend(ageMonths, avoid, flavor, priority) {
   eligible.forEach(([k]) => { scores[k] = 0; });
   const add = (k, pts) => { if (scores[k] !== undefined) scores[k] += pts; };
 
-  if (flavor === 'fruits')  { add('banana', 3); add('sweetpotato', 1); }
-  if (flavor === 'veggies') { add('carrot', 3); }
+  if (flavor === 'fruits')  { add('pumpkin', 2); add('sweetpotato', 1); add('spinach', 1); }
+  if (flavor === 'veggies') { add('spinach', 3); add('pumpkin', 2); }
   if (flavor === 'mixed')   { eligible.forEach(([k]) => add(k, 1)); }
-  if (flavor === 'sweet')   { add('sweetpotato', 3); add('banana', 2); }
+  if (flavor === 'sweet')   { add('sweetpotato', 3); add('pumpkin', 2); }
 
-  if (priority === 'first')  { add('carrot', 4); }
+  if (priority === 'first')  { add('pumpkin', 4); add('sweetpotato', 2); }
   if (priority === 'travel') { add('sweetpotato', 3); eligible.forEach(([k]) => add(k, 1)); }
-  if (priority === 'energy') { add('sweetpotato', 4); add('banana', 2); }
-  if (priority === 'gentle') { add('banana', 3); add('carrot', 1); }
+  if (priority === 'energy') { add('sweetpotato', 4); add('pumpkin', 2); }
+  if (priority === 'gentle') { add('pumpkin', 3); add('spinach', 1); }
 
   return Object.entries(scores)
     .sort((a, b) => b[1] - a[1])
