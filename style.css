@@ -1645,6 +1645,36 @@ section { overflow: hidden; }
   min-height: 560px;
 }
 
+/* Top fog — blends with Testimonials (#FEFAF2) */
+.safe::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 200px;
+  background: linear-gradient(to bottom,
+    #FEFAF2 0%,
+    rgba(254,250,242,0.80) 35%,
+    rgba(254,250,242,0.30) 65%,
+    transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Bottom fog — blends into Contact section (#FFFDF8) */
+.safe::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 200px;
+  background: linear-gradient(to top,
+    #FFFDF8 0%,
+    rgba(255,253,248,0.80) 35%,
+    rgba(255,253,248,0.30) 65%,
+    transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
 /* Handwritten script decorations */
 .safe-script {
   position: absolute;
