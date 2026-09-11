@@ -1243,15 +1243,11 @@ section { overflow: hidden; }
   width: 100%;
 }
 
-/* Organic blob-shaped image */
+/* Photo — no mask, let the image's own shape show */
 .about-blob-img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
-  aspect-ratio: 1 / 1.15;
-  border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
-  box-shadow: 0 24px 70px rgba(0,0,0,0.13);
 }
 
 /* Handwritten text overlaid on photo */
@@ -1386,7 +1382,6 @@ section { overflow: hidden; }
 /* ── Responsive ── */
 @media (max-width: 860px) {
   .about-inner { grid-template-columns: 1fr; gap: 36px; }
-  .about-blob-img { aspect-ratio: 16/9; border-radius: 40px; }
   .about-heading { font-size: 2.2rem; }
   .about-leaf-wrap { display: none; }
   .about-photo-script--tl { font-size: 1.1rem; top: 6%; }
