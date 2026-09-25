@@ -1,5 +1,7 @@
 # FoodSteps — Project Documentation
 
+> **Retired 25 Sep 2026.** The site now lives in `../foodsteps-next` (Next.js, https://foodsteps-next.vercel.app). `index.html` here only redirects there. The last full HTML version (including the Foody chatbot) is git tag `html-site-final` — `git show html-site-final:index.html`. `script.js` still holds the chatbot code.
+
 > Read this first in every new session before touching any file.
 
 ---
